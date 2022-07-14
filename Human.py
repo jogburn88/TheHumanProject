@@ -13,9 +13,6 @@ class Human(object):
     def get_first_name(self):
         return self.name
 
-    # this doesn't work
-    def set_age(self, age):
-        self.age = age
 
 
 
