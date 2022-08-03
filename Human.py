@@ -12,7 +12,7 @@ class Human(object):
         self.set_sex(sex)
 
     def __str__(self):
-        return self._name
+        return "{} is a {}".format(self.get_first_name(), self.get_sex())
 
     def set_sex(self, sex):
         self._sex = sex
@@ -42,26 +42,19 @@ class Human(object):
 
 # class Sex(object):
 
-
-class Female(object):
-
-    def __init__(self):
-        self._sex = "Female"
-
-    def __str__(self):
-        return self._sex
+class Female(Human):
+    def __init__(self, name):
+        super().__init__(name=name, sex="Female")
 
 
 
-class Male(object):
+class Male(Human):
 
-    def __init__(self):
-        self._sex = "Male"
-
-    def __str__(self):
-        return self._sex
+    def __init__(self, name):
+        super().__init__(name=name, sex="Male")
 
 
-# x = Human("john")
-#
-#print(x._sex)
+x = Female("Rachel")
+y = Female("Clara")
+jesse = Male("Jesse")
+print(jesse)
